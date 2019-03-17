@@ -21,9 +21,6 @@ class PostalCodeViewController: UIViewController {
         presenter?.viewDidLoad()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning();
-    }
 }
 
 extension PostalCodeViewController: PostalCodePresenterToViewProtocol {

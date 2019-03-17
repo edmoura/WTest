@@ -34,6 +34,7 @@
 		88DA6A37223EB08400F94CC3 /* WebSitePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DA6A36223EB08400F94CC3 /* WebSitePresenter.swift */; };
 		88DA6A39223EB08F00F94CC3 /* WebSiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DA6A38223EB08F00F94CC3 /* WebSiteViewController.swift */; };
 		88DA6A3B223ED08200F94CC3 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DA6A3A223ED08200F94CC3 /* Config.swift */; };
+		88DA6A3E223EEE9500F94CC3 /* FieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DA6A3D223EEE9500F94CC3 /* FieldTableViewCell.swift */; };
 		919A35B885790891405085B4 /* Pods_WTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 062CDDB77464A2184FC723FD /* Pods_WTestTests.framework */; };
 		C0F0744F43D08B0EF2A786E3 /* Pods_WTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F26204A862CD95666A07EC /* Pods_WTestUITests.framework */; };
 		E000F87E22D4CFDA6DEF0A5C /* Pods_WTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD1415ACF8B5916CFCB6471C /* Pods_WTest.framework */; };
@@ -97,6 +98,7 @@
 		88DA6A36223EB08400F94CC3 /* WebSitePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSitePresenter.swift; sourceTree = "<group>"; };
 		88DA6A38223EB08F00F94CC3 /* WebSiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSiteViewController.swift; sourceTree = "<group>"; };
 		88DA6A3A223ED08200F94CC3 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		88DA6A3D223EEE9500F94CC3 /* FieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldTableViewCell.swift; sourceTree = "<group>"; };
 		A2092420CABC89630EA0FBF5 /* Pods-WTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WTestTests.release.xcconfig"; path = "Target Support Files/Pods-WTestTests/Pods-WTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		BD1415ACF8B5916CFCB6471C /* Pods_WTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF1D3F677A1FAA0F1A30ABAA /* Pods-WTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WTestTests.debug.xcconfig"; path = "Target Support Files/Pods-WTestTests/Pods-WTestTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 		88DA6A24223EAEAF00F94CC3 /* Field View */ = {
 			isa = PBXGroup;
 			children = (
+				88DA6A3C223EEE7D00F94CC3 /* Cells */,
 				88DA6A26223EAF8A00F94CC3 /* FieldProtocols.swift */,
 				88DA6A28223EAF9200F94CC3 /* FieldRouter.swift */,
 				88DA6A2A223EAF9C00F94CC3 /* FieldInteractor.swift */,
@@ -277,6 +280,14 @@
 				88DA6A38223EB08F00F94CC3 /* WebSiteViewController.swift */,
 			);
 			path = "Web Site View";
+			sourceTree = "<group>";
+		};
+		88DA6A3C223EEE7D00F94CC3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				88DA6A3D223EEE9500F94CC3 /* FieldTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -583,6 +594,7 @@
 				88DA6A13223DBB7500F94CC3 /* PostalCodeRouter.swift in Sources */,
 				88DA6A19223DBBC200F94CC3 /* PostalCodeViewController.swift in Sources */,
 				88DA6A2F223EAFB000F94CC3 /* FieldViewController.swift in Sources */,
+				88DA6A3E223EEE9500F94CC3 /* FieldTableViewCell.swift in Sources */,
 				88DA6A23223DD2BE00F94CC3 /* ListViewController.swift in Sources */,
 				88DA6A29223EAF9200F94CC3 /* FieldRouter.swift in Sources */,
 				88CB5538223D3AC4005438D4 /* AppDelegate.swift in Sources */,

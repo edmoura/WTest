@@ -20,10 +20,6 @@ class ListViewController: UIViewController {
         ListViewRouter.createModule(viewRef: self)
         presenter?.viewDidLoad()
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 }
 
 extension ListViewController: ListViewPresenterToViewProtocol {

@@ -32,7 +32,7 @@ class WebSiteViewController: UIViewController {
         presenter?.viewWillAppear()
     }
     
-    private func configWebView() {
+    func configWebView() {
         self.webView.navigationDelegate = self
         self.webView.scrollView.delegate = self
         self.progressView.alpha = 0

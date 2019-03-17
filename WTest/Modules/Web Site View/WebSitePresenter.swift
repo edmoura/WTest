@@ -13,7 +13,9 @@ class WebSitePresenter: WebSiteViewToPresenterProtocol {
     var view: WebSitePresenterToViewProtocol?
     var interactor: WebSitePresenterToInteractorProtocol?
     var router: WebSitePresenterToRouterProtocol?
-    
+}
+
+extension WebSitePresenter: WebSiteInteractorToPresenterProtocol {
     func viewDidLoad() {}
     
     func viewWillAppear() {
@@ -54,8 +56,4 @@ class WebSitePresenter: WebSiteViewToPresenterProtocol {
     func scrollViewWillBeginZooming(_ scrollView: UIScrollView, with view: UIView?) {
         scrollView.pinchGestureRecognizer?.isEnabled = false
     }
-}
-
-extension WebSitePresenter: WebSiteInteractorToPresenterProtocol {
-    
 }

@@ -7,9 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 protocol FieldPresenterToViewProtocol: class {
     //Presenter -> View
+    func reloadTableData()
 }
 
 protocol FieldViewToPresenterProtocol: class {
@@ -17,6 +19,8 @@ protocol FieldViewToPresenterProtocol: class {
     var view: FieldPresenterToViewProtocol? {get set}
     var interactor: FieldPresenterToInteractorProtocol? {get set}
     var router: FieldPresenterToRouterProtocol? {get set}
+    func numberOfRowsInSection() -> Int
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     func viewDidLoad()
 }
 
