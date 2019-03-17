@@ -1,0 +1,46 @@
+PODS:
+  - Alamofire (4.8.1)
+  - Disk (0.4.0)
+  - Kingfisher (5.2.0)
+  - Moya (12.0.1):
+    - Moya/Core (= 12.0.1)
+  - Moya/Core (12.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.0)
+  - Nimble (8.0.1)
+  - Quick (2.0.0)
+  - Result (4.1.0)
+  - SnapKit (4.2.0)
+
+DEPENDENCIES:
+  - Disk
+  - Kingfisher
+  - Moya
+  - Nimble
+  - Quick
+  - SnapKit
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Disk
+    - Kingfisher
+    - Moya
+    - Nimble
+    - Quick
+    - Result
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  Disk: ef2956657d5bb56034b38b29b352170165226440
+  Kingfisher: 07067cfacf371117330dceb4b4b8f5c4b691ab42
+  Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
+  Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
+  Quick: ce1276c7c27ba2da3cb2fd0cde053c3648b3b22d
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+
+PODFILE CHECKSUM: 8d24da134597eba0d7f079f1fb39a62117fdf9aa
+
+COCOAPODS: 1.6.0.beta.2
