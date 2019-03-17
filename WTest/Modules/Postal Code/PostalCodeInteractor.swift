@@ -10,4 +10,9 @@ import Foundation
 
 class PostalCodeInteractor: PostalCodePresenterToInteractorProtocol {
     var presenter: PostalCodeInteractorToPresenterProtocol?
+    
+    func getPostaCode() {
+        print("getPostaCode")
+        self.presenter?.postalCodeDone()
+    }
 }

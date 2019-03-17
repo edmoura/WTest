@@ -9,12 +9,17 @@
 import Foundation
 import UIKit
 
+protocol PostalCodePresenterToRouterProtocol: class {
+    //Router
+    static func createModule(viewRef: PostalCodeViewController)
+}
+
 protocol PostalCodePresenterToViewProtocol: class {
-    //Presenter -> View
+    //View
 }
 
 protocol PostalCodeViewToPresenterProtocol: class {
-    //View -> Presenter
+    //Presenter
     var view: PostalCodePresenterToViewProtocol? {get set}
     var interactor: PostalCodePresenterToInteractorProtocol? {get set}
     var router: PostalCodePresenterToRouterProtocol? {get set}
@@ -23,15 +28,13 @@ protocol PostalCodeViewToPresenterProtocol: class {
 }
 
 protocol PostalCodePresenterToInteractorProtocol: class {
-    //Presenter -> Interactor
+    //Interactor
     var presenter: PostalCodeInteractorToPresenterProtocol? {get set}
+    func getPostaCode()
 }
 
 protocol PostalCodeInteractorToPresenterProtocol: class {
     //Interactor -> Presenter
+    func postalCodeDone()
 }
 
-protocol PostalCodePresenterToRouterProtocol: class {
-    //Presenter -> Router
-    static func createModule(viewRef: PostalCodeViewController)
-}

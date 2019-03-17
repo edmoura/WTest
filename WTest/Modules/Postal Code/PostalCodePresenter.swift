@@ -15,7 +15,12 @@ class PostalCodePresenter: PostalCodeViewToPresenterProtocol {
 }
 
 extension PostalCodePresenter: PostalCodeInteractorToPresenterProtocol {
+    func postalCodeDone() {
+        print("PostalCodePresenter postalCodeDone")
+    }
+    
     func viewDidLoad() {
         print("PostalCodePresenter viewDidLoad")
+        //self.interactor?.getPostaCode()
     }
 }
