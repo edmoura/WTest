@@ -20,7 +20,9 @@ class FieldViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         FieldRouter.createModule(viewRef: self)
+        addObserver()
         configTableView()
+        addTapToDismissKeyboard()
     }
     
     func configTableView() {
@@ -32,10 +34,45 @@ class FieldViewController: UIViewController {
         self.tableView.isAccessibilityElement = true
         self.tableView.translatesAutoresizingMaskIntoConstraints = false
         self.tableView.accessibilityIdentifier = "table--listTableView"
+        self.tableView.keyboardDismissMode = .onDrag
     }
 }
 
 extension FieldViewController: FieldPresenterToViewProtocol, UITableViewDelegate, UITableViewDataSource {
+    func addTapToDismissKeyboard() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    func addObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboard), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+    }
+    
+    func removeObserver() {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    @objc func keyboard(notification: Notification) {
+        if notification.userInfo != nil {
+            let userInfo = notification.userInfo!
+            let keyboardScreenEndFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+            let keyboardViewEndFrame = self.view.superview?.convert(keyboardScreenEndFrame, from: self.view.superview?.window)
+            if notification.name == UIResponder.keyboardWillHideNotification {
+                self.tableView.contentInset = .zero
+            } else {
+                self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: (keyboardViewEndFrame?.height ?? 250), right: 0)
+            }
+        }
+        self.tableView.scrollIndicatorInsets = self.tableView.contentInset
+    }
+    
     func reloadTableData() {
         self.tableView.reloadData()
     }
