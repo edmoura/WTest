@@ -175,7 +175,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IcD-hw-Hwf">
-                                                    <rect key="frame" x="20" y="19.5" width="335" height="40"/>
+                                                    <rect key="frame" x="20" y="14.5" width="335" height="40"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="field 01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSD-kg-N1f">
                                                             <rect key="frame" x="0.0" y="0.0" width="52.5" height="40"/>
@@ -194,11 +194,20 @@
                                                         </textField>
                                                     </subviews>
                                                 </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="normal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9h-9k-8fd">
+                                                    <rect key="frame" x="82.5" y="56.5" width="33" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="highlightedColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="a9h-9k-8fd" firstAttribute="top" secondItem="PvC-4K-xM0" secondAttribute="bottom" constant="2" id="7uR-w1-Y6J"/>
                                                 <constraint firstItem="IcD-hw-Hwf" firstAttribute="leading" secondItem="BpH-uz-ZuC" secondAttribute="leading" constant="20" id="QaR-aZ-E3e"/>
                                                 <constraint firstItem="IcD-hw-Hwf" firstAttribute="top" secondItem="BpH-uz-ZuC" secondAttribute="top" priority="250" constant="30" id="bOb-NN-brh"/>
-                                                <constraint firstAttribute="bottom" secondItem="IcD-hw-Hwf" secondAttribute="bottom" priority="251" constant="30" id="xtS-0N-J4U"/>
+                                                <constraint firstItem="a9h-9k-8fd" firstAttribute="trailing" secondItem="PvC-4K-xM0" secondAttribute="trailing" priority="250" id="iLz-LF-uXO"/>
+                                                <constraint firstItem="a9h-9k-8fd" firstAttribute="leading" secondItem="PvC-4K-xM0" secondAttribute="leading" id="opd-ex-875"/>
+                                                <constraint firstAttribute="bottom" secondItem="IcD-hw-Hwf" secondAttribute="bottom" priority="251" constant="35" id="xtS-0N-J4U"/>
                                                 <constraint firstAttribute="trailing" secondItem="IcD-hw-Hwf" secondAttribute="trailing" constant="20" id="zhy-dM-aqr"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -206,13 +215,27 @@
                                         <connections>
                                             <outlet property="field" destination="PvC-4K-xM0" id="xsw-vn-x8p"/>
                                             <outlet property="labelTitle" destination="DSD-kg-N1f" id="IkD-aR-k9G"/>
+                                            <outlet property="labelType" destination="a9h-9k-8fd" id="Rxk-TZ-ZmC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMV-RN-AB2">
+                                <rect key="frame" x="0.0" y="368" width="375" height="250"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="I5c-nJ-UJz"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="pNm-hi-OiO" firstAttribute="bottom" secondItem="rMV-RN-AB2" secondAttribute="bottom" id="GIr-u3-q39"/>
+                            <constraint firstItem="pNm-hi-OiO" firstAttribute="trailing" secondItem="rMV-RN-AB2" secondAttribute="trailing" id="JVK-OF-FOy"/>
+                            <constraint firstItem="rMV-RN-AB2" firstAttribute="leading" secondItem="pNm-hi-OiO" secondAttribute="leading" id="a4M-Bv-Cem"/>
                             <constraint firstItem="MEK-jO-w1x" firstAttribute="leading" secondItem="pNm-hi-OiO" secondAttribute="leading" id="aX4-ow-6Nu"/>
                             <constraint firstItem="pNm-hi-OiO" firstAttribute="trailing" secondItem="MEK-jO-w1x" secondAttribute="trailing" id="dog-dv-9s5"/>
                             <constraint firstItem="MEK-jO-w1x" firstAttribute="top" secondItem="pNm-hi-OiO" secondAttribute="top" id="iMT-KZ-PZp"/>
@@ -223,6 +246,7 @@
                     <tabBarItem key="tabBarItem" title="Third" id="KD6-q4-AmX"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="pickerContent" destination="rMV-RN-AB2" id="dSd-bK-hfR"/>
                         <outlet property="tableView" destination="MEK-jO-w1x" id="5Mq-ro-W4r"/>
                     </connections>
                 </viewController>

@@ -9,6 +9,7 @@
 import Foundation
 
 struct Config {
+    static let tableViewCounter = 51
     static var endPoint: String {
         get {
             if let path = Bundle.main.path(forResource: "Info", ofType: "plist") {

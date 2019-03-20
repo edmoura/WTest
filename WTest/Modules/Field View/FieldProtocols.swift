@@ -9,12 +9,13 @@
 import Foundation
 import UIKit
 
-protocol FieldPresenterToViewProtocol: class {
+protocol FieldPresenterToViewProtocol: PickerProtocolModuleApi, PickerDelegateProtocol {
     //Presenter -> View
     func reloadTableData()
+    func dismissKeyboard()
 }
 
-protocol FieldViewToPresenterProtocol: class {
+protocol FieldViewToPresenterProtocol: PickerDelegateProtocol {
     //View -> Presenter
     var view: FieldPresenterToViewProtocol? {get set}
     var interactor: FieldPresenterToInteractorProtocol? {get set}

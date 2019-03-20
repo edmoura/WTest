@@ -35,6 +35,13 @@
 		88DA6A39223EB08F00F94CC3 /* WebSiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DA6A38223EB08F00F94CC3 /* WebSiteViewController.swift */; };
 		88DA6A3B223ED08200F94CC3 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DA6A3A223ED08200F94CC3 /* Config.swift */; };
 		88DA6A3E223EEE9500F94CC3 /* FieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DA6A3D223EEE9500F94CC3 /* FieldTableViewCell.swift */; };
+		88DA6A4022407D1D00F94CC3 /* FieldModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DA6A3F22407D1D00F94CC3 /* FieldModule.swift */; };
+		88DA6A4A22429FDD00F94CC3 /* PickerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DA6A4322429FDD00F94CC3 /* PickerComponent.swift */; };
+		88DA6A4B22429FDD00F94CC3 /* PickerComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88DA6A4422429FDD00F94CC3 /* PickerComponent.xib */; };
+		88DA6A4C22429FDD00F94CC3 /* PickerProtocolModuleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DA6A4522429FDD00F94CC3 /* PickerProtocolModuleApi.swift */; };
+		88DA6A4D22429FDD00F94CC3 /* InputButtonAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88DA6A4722429FDD00F94CC3 /* InputButtonAccessoryView.xib */; };
+		88DA6A4E22429FDD00F94CC3 /* InputButtonAccessoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DA6A4822429FDD00F94CC3 /* InputButtonAccessoryProtocol.swift */; };
+		88DA6A4F22429FDD00F94CC3 /* InputButtonAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DA6A4922429FDD00F94CC3 /* InputButtonAccessoryView.swift */; };
 		919A35B885790891405085B4 /* Pods_WTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 062CDDB77464A2184FC723FD /* Pods_WTestTests.framework */; };
 		C0F0744F43D08B0EF2A786E3 /* Pods_WTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F26204A862CD95666A07EC /* Pods_WTestUITests.framework */; };
 		E000F87E22D4CFDA6DEF0A5C /* Pods_WTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD1415ACF8B5916CFCB6471C /* Pods_WTest.framework */; };
@@ -99,6 +106,13 @@
 		88DA6A38223EB08F00F94CC3 /* WebSiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSiteViewController.swift; sourceTree = "<group>"; };
 		88DA6A3A223ED08200F94CC3 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		88DA6A3D223EEE9500F94CC3 /* FieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldTableViewCell.swift; sourceTree = "<group>"; };
+		88DA6A3F22407D1D00F94CC3 /* FieldModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldModule.swift; sourceTree = "<group>"; };
+		88DA6A4322429FDD00F94CC3 /* PickerComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerComponent.swift; sourceTree = "<group>"; };
+		88DA6A4422429FDD00F94CC3 /* PickerComponent.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickerComponent.xib; sourceTree = "<group>"; };
+		88DA6A4522429FDD00F94CC3 /* PickerProtocolModuleApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerProtocolModuleApi.swift; sourceTree = "<group>"; };
+		88DA6A4722429FDD00F94CC3 /* InputButtonAccessoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputButtonAccessoryView.xib; sourceTree = "<group>"; };
+		88DA6A4822429FDD00F94CC3 /* InputButtonAccessoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputButtonAccessoryProtocol.swift; sourceTree = "<group>"; };
+		88DA6A4922429FDD00F94CC3 /* InputButtonAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputButtonAccessoryView.swift; sourceTree = "<group>"; };
 		A2092420CABC89630EA0FBF5 /* Pods-WTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WTestTests.release.xcconfig"; path = "Target Support Files/Pods-WTestTests/Pods-WTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		BD1415ACF8B5916CFCB6471C /* Pods_WTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF1D3F677A1FAA0F1A30ABAA /* Pods-WTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WTestTests.debug.xcconfig"; path = "Target Support Files/Pods-WTestTests/Pods-WTestTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -185,6 +199,7 @@
 		88CB5536223D3AC4005438D4 /* WTest */ = {
 			isa = PBXGroup;
 			children = (
+				88DA6A41224288B500F94CC3 /* View */,
 				88DA6A0D223DBAF100F94CC3 /* Modules */,
 				88DA6A0C223DBACF00F94CC3 /* Common */,
 			);
@@ -266,6 +281,7 @@
 				88DA6A2A223EAF9C00F94CC3 /* FieldInteractor.swift */,
 				88DA6A2C223EAFA600F94CC3 /* FieldPresenter.swift */,
 				88DA6A2E223EAFB000F94CC3 /* FieldViewController.swift */,
+				88DA6A3F22407D1D00F94CC3 /* FieldModule.swift */,
 			);
 			path = "Field View";
 			sourceTree = "<group>";
@@ -288,6 +304,35 @@
 				88DA6A3D223EEE9500F94CC3 /* FieldTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		88DA6A41224288B500F94CC3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88DA6A4622429FDD00F94CC3 /* Button Component Keyboard */,
+				88DA6A4222429FDD00F94CC3 /* Picker Component */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88DA6A4222429FDD00F94CC3 /* Picker Component */ = {
+			isa = PBXGroup;
+			children = (
+				88DA6A4322429FDD00F94CC3 /* PickerComponent.swift */,
+				88DA6A4422429FDD00F94CC3 /* PickerComponent.xib */,
+				88DA6A4522429FDD00F94CC3 /* PickerProtocolModuleApi.swift */,
+			);
+			path = "Picker Component";
+			sourceTree = "<group>";
+		};
+		88DA6A4622429FDD00F94CC3 /* Button Component Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				88DA6A4722429FDD00F94CC3 /* InputButtonAccessoryView.xib */,
+				88DA6A4822429FDD00F94CC3 /* InputButtonAccessoryProtocol.swift */,
+				88DA6A4922429FDD00F94CC3 /* InputButtonAccessoryView.swift */,
+			);
+			path = "Button Component Keyboard";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,6 +446,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				88CB5544223D3AC5005438D4 /* LaunchScreen.storyboard in Resources */,
+				88DA6A4B22429FDD00F94CC3 /* PickerComponent.xib in Resources */,
+				88DA6A4D22429FDD00F94CC3 /* InputButtonAccessoryView.xib in Resources */,
 				88CB5541223D3AC5005438D4 /* Assets.xcassets in Resources */,
 				88CB553F223D3AC4005438D4 /* Main.storyboard in Resources */,
 			);
@@ -586,18 +633,21 @@
 			files = (
 				88DA6A27223EAF8A00F94CC3 /* FieldProtocols.swift in Sources */,
 				88DA6A2B223EAF9C00F94CC3 /* FieldInteractor.swift in Sources */,
+				88DA6A4E22429FDD00F94CC3 /* InputButtonAccessoryProtocol.swift in Sources */,
 				88DA6A17223DBB9A00F94CC3 /* PostalCodePresenter.swift in Sources */,
 				88DA6A15223DBB8E00F94CC3 /* PostalCodeInteractor.swift in Sources */,
 				88DA6A37223EB08400F94CC3 /* WebSitePresenter.swift in Sources */,
 				88DA6A39223EB08F00F94CC3 /* WebSiteViewController.swift in Sources */,
 				88DA6A1B223DD29600F94CC3 /* ListViewProtocols.swift in Sources */,
 				88DA6A13223DBB7500F94CC3 /* PostalCodeRouter.swift in Sources */,
+				88DA6A4C22429FDD00F94CC3 /* PickerProtocolModuleApi.swift in Sources */,
 				88DA6A19223DBBC200F94CC3 /* PostalCodeViewController.swift in Sources */,
 				88DA6A2F223EAFB000F94CC3 /* FieldViewController.swift in Sources */,
 				88DA6A3E223EEE9500F94CC3 /* FieldTableViewCell.swift in Sources */,
 				88DA6A23223DD2BE00F94CC3 /* ListViewController.swift in Sources */,
 				88DA6A29223EAF9200F94CC3 /* FieldRouter.swift in Sources */,
 				88CB5538223D3AC4005438D4 /* AppDelegate.swift in Sources */,
+				88DA6A4F22429FDD00F94CC3 /* InputButtonAccessoryView.swift in Sources */,
 				88DA6A1F223DD2A700F94CC3 /* ListViewInteractor.swift in Sources */,
 				88DA6A33223EB06F00F94CC3 /* WebSiteRouter.swift in Sources */,
 				88DA6A3B223ED08200F94CC3 /* Config.swift in Sources */,
@@ -606,6 +656,8 @@
 				88DA6A11223DBB6C00F94CC3 /* PostalCodeProtocols.swift in Sources */,
 				88DA6A31223EB06600F94CC3 /* WebSiteProtocols.swift in Sources */,
 				88DA6A35223EB07B00F94CC3 /* WebSiteInteractor.swift in Sources */,
+				88DA6A4A22429FDD00F94CC3 /* PickerComponent.swift in Sources */,
+				88DA6A4022407D1D00F94CC3 /* FieldModule.swift in Sources */,
 				88DA6A1D223DD29E00F94CC3 /* ListViewRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
