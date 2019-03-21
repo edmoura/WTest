@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8885FA382242F8B600387D71 /* HeaderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885FA372242F8B600387D71 /* HeaderImageView.swift */; };
+		8885FA3A2242FD9D00387D71 /* Apperance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885FA392242FD9D00387D71 /* Apperance.swift */; };
+		8885FA3D2242FEA300387D71 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8885FA3C2242FEA300387D71 /* UIImage+.swift */; };
 		88CB5538223D3AC4005438D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CB5537223D3AC4005438D4 /* AppDelegate.swift */; };
 		88CB553F223D3AC4005438D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88CB553D223D3AC4005438D4 /* Main.storyboard */; };
 		88CB5541223D3AC5005438D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88CB5540223D3AC5005438D4 /* Assets.xcassets */; };
@@ -72,6 +75,9 @@
 		4A2CC7E1170B6383D385E0FE /* Pods-WTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WTest.debug.xcconfig"; path = "Target Support Files/Pods-WTest/Pods-WTest.debug.xcconfig"; sourceTree = "<group>"; };
 		51FE0887F19296293D0B6ECC /* Pods-WTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WTestUITests.release.xcconfig"; path = "Target Support Files/Pods-WTestUITests/Pods-WTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7E99F9DFCB92AF3032929E22 /* Pods-WTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WTest.release.xcconfig"; path = "Target Support Files/Pods-WTest/Pods-WTest.release.xcconfig"; sourceTree = "<group>"; };
+		8885FA372242F8B600387D71 /* HeaderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderImageView.swift; sourceTree = "<group>"; };
+		8885FA392242FD9D00387D71 /* Apperance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apperance.swift; sourceTree = "<group>"; };
+		8885FA3C2242FEA300387D71 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		88CB5534223D3AC4005438D4 /* WTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88CB5537223D3AC4005438D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88CB553E223D3AC4005438D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -174,6 +180,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		8885FA362242F89700387D71 /* Image View */ = {
+			isa = PBXGroup;
+			children = (
+				8885FA372242F8B600387D71 /* HeaderImageView.swift */,
+			);
+			path = "Image View";
+			sourceTree = "<group>";
+		};
+		8885FA3B2242FE9600387D71 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8885FA3C2242FEA300387D71 /* UIImage+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		88CB552B223D3AC4005438D4 = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +221,7 @@
 		88CB5536223D3AC4005438D4 /* WTest */ = {
 			isa = PBXGroup;
 			children = (
+				8885FA3B2242FE9600387D71 /* Extension */,
 				88DA6A41224288B500F94CC3 /* View */,
 				88DA6A0D223DBAF100F94CC3 /* Modules */,
 				88DA6A0C223DBACF00F94CC3 /* Common */,
@@ -233,6 +256,7 @@
 				88CB5542223D3AC5005438D4 /* LaunchScreen.storyboard */,
 				88CB5545223D3AC5005438D4 /* Info.plist */,
 				88DA6A3A223ED08200F94CC3 /* Config.swift */,
+				8885FA392242FD9D00387D71 /* Apperance.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -263,6 +287,7 @@
 		88DA6A0F223DBB1A00F94CC3 /* List View */ = {
 			isa = PBXGroup;
 			children = (
+				8885FA362242F89700387D71 /* Image View */,
 				88DA6A1A223DD29600F94CC3 /* ListViewProtocols.swift */,
 				88DA6A1C223DD29E00F94CC3 /* ListViewRouter.swift */,
 				88DA6A1E223DD2A700F94CC3 /* ListViewInteractor.swift */,
@@ -647,6 +672,7 @@
 				88DA6A23223DD2BE00F94CC3 /* ListViewController.swift in Sources */,
 				88DA6A29223EAF9200F94CC3 /* FieldRouter.swift in Sources */,
 				88CB5538223D3AC4005438D4 /* AppDelegate.swift in Sources */,
+				8885FA382242F8B600387D71 /* HeaderImageView.swift in Sources */,
 				88DA6A4F22429FDD00F94CC3 /* InputButtonAccessoryView.swift in Sources */,
 				88DA6A1F223DD2A700F94CC3 /* ListViewInteractor.swift in Sources */,
 				88DA6A33223EB06F00F94CC3 /* WebSiteRouter.swift in Sources */,
@@ -655,7 +681,9 @@
 				88DA6A2D223EAFA600F94CC3 /* FieldPresenter.swift in Sources */,
 				88DA6A11223DBB6C00F94CC3 /* PostalCodeProtocols.swift in Sources */,
 				88DA6A31223EB06600F94CC3 /* WebSiteProtocols.swift in Sources */,
+				8885FA3A2242FD9D00387D71 /* Apperance.swift in Sources */,
 				88DA6A35223EB07B00F94CC3 /* WebSiteInteractor.swift in Sources */,
+				8885FA3D2242FEA300387D71 /* UIImage+.swift in Sources */,
 				88DA6A4A22429FDD00F94CC3 /* PickerComponent.swift in Sources */,
 				88DA6A4022407D1D00F94CC3 /* FieldModule.swift in Sources */,
 				88DA6A1D223DD29E00F94CC3 /* ListViewRouter.swift in Sources */,

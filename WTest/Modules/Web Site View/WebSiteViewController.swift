@@ -40,6 +40,10 @@ class WebSiteViewController: UIViewController {
 }
 
 extension WebSiteViewController: WebSitePresenterToViewProtocol, WKNavigationDelegate, UIScrollViewDelegate {
+    func setTitleView(title: String) {
+        self.navigationController?.navigationBar.topItem?.title = title
+    }
+    
     func webViewLoadRequest(url: String) {
         let _url = URL(string: url)
         let request = URLRequest(url: _url!)
@@ -57,7 +61,7 @@ extension WebSiteViewController: WebSitePresenterToViewProtocol, WKNavigationDel
     }
     
     func showProgressView() {
-        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseInOut, animations: {
             self.progressView.alpha = 1
         }, completion: nil)
     }
@@ -65,18 +69,17 @@ extension WebSiteViewController: WebSitePresenterToViewProtocol, WKNavigationDel
     func hideProgressView(isHide: Bool) {
         if isHide == true {
             self.progressConstraintHeight.constant = 0
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity:0.5, options: .curveEaseInOut, animations: {
-                self.progressView.layoutIfNeeded()
-            }, completion:nil)
+            UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity:0.3, options: .curveEaseInOut, animations: {
+                self.view.layoutIfNeeded()
+            }, completion: nil)
             return
         }
-        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: {
-            self.progressView.alpha = 0
-        }, completion: nil)
     }
     
     func setProgressView(float: Float) {
-        progressView.progress = float;
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity:0.3, options: .curveEaseInOut, animations: {
+            self.progressView.progress = float
+        }, completion: nil)
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {

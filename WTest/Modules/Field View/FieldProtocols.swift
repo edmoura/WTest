@@ -13,6 +13,7 @@ protocol FieldPresenterToViewProtocol: PickerProtocolModuleApi, PickerDelegatePr
     //Presenter -> View
     func reloadTableData()
     func dismissKeyboard()
+    func setTitleView(title: String)
 }
 
 protocol FieldViewToPresenterProtocol: PickerDelegateProtocol {

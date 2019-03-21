@@ -29,6 +29,7 @@ class FieldViewController: UIViewController {
         configTableView()
         addTapToDismissKeyboard()
         addPickerComponent()
+        setTitleView(title: "List")
     }
     
     func configTableView() {
@@ -45,6 +46,10 @@ class FieldViewController: UIViewController {
 }
 
 extension FieldViewController: FieldPresenterToViewProtocol, UITableViewDelegate, UITableViewDataSource, PickerProtocolModuleApi {
+    func setTitleView(title: String) {
+        self.navigationController?.navigationBar.topItem?.title = title
+    }
+    
     func addPickerComponent() {
         picker = PickerComponent(frame: CGRect(x: 0, y: 0, width: Int(self.view.frame.width), height: pickerHeight))
         picker?.delegate = self

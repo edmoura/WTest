@@ -41,6 +41,12 @@ extension WebSitePresenter: WebSiteInteractorToPresenterProtocol {
             }
             return
         }
+        if keyPath == #keyPath(WKWebView.title) {
+            if let title = change?[NSKeyValueChangeKey.newKey] as? String {
+                view?.setTitleView(title: title)
+            }
+            return
+        }
     }
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction) {

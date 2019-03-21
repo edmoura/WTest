@@ -17,6 +17,7 @@ protocol WebSitePresenterToViewProtocol: class {
     func showProgressView()
     func hideProgressView(isHide: Bool)
     func setProgressView(float: Float)
+    func setTitleView(title: String)
 }
 
 protocol WebSiteViewToPresenterProtocol: class {
