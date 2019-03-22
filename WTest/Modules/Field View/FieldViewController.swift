@@ -35,9 +35,10 @@ class FieldViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.tintColor = .white
-        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 61 / 255, green: 14 / 255, blue: 42 / 255, alpha: 1)
+        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 79 / 255, green: 22 / 255, blue: 56 / 255, alpha: 1)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = false
+        UIApplication.shared.statusBarView?.backgroundColor = UIColor.init(red: 79 / 255, green: 22 / 255, blue: 56 / 255, alpha: 1)
     }
     
     func configTableView() {

@@ -16,9 +16,3 @@ enum FieldModule: Int {
     case List
     static let allValues = [Normal, Number, Uppercase, Date, List]
 }
-
-/*texto normal
-números
-forçar maiúsculas
-datas
-seleccionar entrada duma lista*/

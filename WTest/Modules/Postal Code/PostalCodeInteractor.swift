@@ -7,12 +7,25 @@
 //
 
 import Foundation
+import Moya
 
 class PostalCodeInteractor: PostalCodePresenterToInteractorProtocol {
     var presenter: PostalCodeInteractorToPresenterProtocol?
+    //let concelho = MoyaProvider<ConcelhoService>()
+    let concelho = MoyaProvider<ConcelhoService>(plugins: [NetworkLoggerPlugin(verbose: true)])
+    var request: Cancellable?
     
-    func getPostaCode() {
-        print("getPostaCode")
-        self.presenter?.postalCodeDone()
+    func getPostalCode(callback: @escaping(Result<[ConcelhoModel]>) -> Void) {
+        request = concelho.request(.getConcelhos(), completion: { (result) in
+            switch result {
+            case let .success(moyaResponse):
+                if let _result = try? JSONDecoder().decode([ConcelhoModel].self, from: moyaResponse.data) {
+                    callback(.success(_result))
+                } else {
+                    callback(.failure(WTestError.jsonNotSerializable))
+                }
+            case let .failure(error): callback(.failure(error))
+            }
+        })
     }
 }
