@@ -11,6 +11,7 @@ import UIKit
 
 protocol ListViewPresenterToViewProtocol: class {
     //Presenter -> View
+    func setTitleView(title: String)
 }
 
 protocol ListViewViewToPresenterProtocol: class {
@@ -19,6 +20,8 @@ protocol ListViewViewToPresenterProtocol: class {
     var interactor: ListViewPresenterToInteractorProtocol? {get set}
     var router: ListViewPresenterToRouterProtocol? {get set}
     func viewDidLoad()
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
 }
 
 protocol ListViewPresenterToInteractorProtocol: class {

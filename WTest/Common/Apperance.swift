@@ -15,10 +15,10 @@ struct Apperance {
         let tabBar = UITabBar.appearance()
         let font = UIFont.systemFont(ofSize: 17, weight: .bold)
         let barButtonItemAppearance = UIBarButtonItem.appearance()
-        navAppearance.barStyle = .black
-        navAppearance.barTintColor = UIColor.init(red: 61 / 255, green: 14 / 255, blue: 42 / 255, alpha: 1)
-        navAppearance.isTranslucent = false
+      navAppearance.barStyle = .black
+//      navAppearance.barTintColor = UIColor.init(red: 61 / 255, green: 14 / 255, blue: 42 / 255, alpha: 1)
         navAppearance.tintColor = UIColor.white
+//      navAppearance.isTranslucent = false
         navAppearance.shadowImage = UIImage.imageWithColor(color: UIColor.init(red: 61 / 255, green: 14 / 255, blue: 42 / 255, alpha: 1))
         navAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: font]
         barButtonItemAppearance.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: font], for: .normal)

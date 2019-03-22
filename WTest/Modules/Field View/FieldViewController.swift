@@ -32,6 +32,14 @@ class FieldViewController: UIViewController {
         setTitleView(title: "List")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.tintColor = .white
+        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 61 / 255, green: 14 / 255, blue: 42 / 255, alpha: 1)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = false
+    }
+    
     func configTableView() {
         tableView.delegate = self
         tableView.dataSource = self
