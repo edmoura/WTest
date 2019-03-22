@@ -91,9 +91,3 @@ extension PostalCodePresenter: PostalCodeInteractorToPresenterProtocol {
     }
     
 }
-
-/*
- if list.contains(where: {$0.compare(word, options: .caseInsensitive) == .orderedSame}) {
- print(true)  // true
- }
- */
