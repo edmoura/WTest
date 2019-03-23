@@ -11,10 +11,8 @@ import Moya
 
 class PostalCodeInteractor: PostalCodePresenterToInteractorProtocol {
     var presenter: PostalCodeInteractorToPresenterProtocol?
-    //let concelho = MoyaProvider<ConcelhoService>()
-    let concelho = MoyaProvider<ConcelhoService>(plugins: [NetworkLoggerPlugin(verbose: true)])
+    let concelho = MoyaProvider<ConcelhoService>()
     var request: Cancellable?
-    
     func getPostalCode(callback: @escaping(Result<[ConcelhoModel]>) -> Void) {
         request = concelho.request(.getConcelhos(), completion: { (result) in
             switch result {

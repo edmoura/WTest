@@ -10,13 +10,6 @@ import Foundation
 import UIKit
 
 class PostalCodeRouter: PostalCodePresenterToRouterProtocol {
-    
-    /*func pushToFruitDetail(with fruit: Fruit,from view: UIViewController) {
-        let fruitDetailViewController = view.storyboard?.instantiateViewController(withIdentifier: "FruitDetailView") as! FruitDetailView
-        FruitDetailWireFrame.createFruitDetailModule(with: fruitDetailViewController, and: fruit)
-        view.navigationController?.pushViewController(fruitDetailViewController, animated: true)
-    }*/
-    
     static func createModule(viewRef: PostalCodeViewController) {
         let presenter: PostalCodeViewToPresenterProtocol & PostalCodeInteractorToPresenterProtocol = PostalCodePresenter()
         let interactor: PostalCodePresenterToInteractorProtocol = PostalCodeInteractor()

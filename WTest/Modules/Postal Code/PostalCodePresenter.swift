@@ -15,6 +15,7 @@ class PostalCodePresenter: PostalCodeViewToPresenterProtocol {
     let base: BaseInteractor = BaseInteractor()
     var _concelho: [ConcelhoModel]?
     var searchArray: [ConcelhoModel]? = []
+    var isSearching: Bool = false
 }
 
 extension PostalCodePresenter: PostalCodeInteractorToPresenterProtocol {
@@ -44,14 +45,16 @@ extension PostalCodePresenter: PostalCodeInteractorToPresenterProtocol {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.searchArray?.count ?? 0
+        return isSearching == false ? self._concelho?.count ?? 0 : self.searchArray?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? PostalCodeTableViewCell else {
             return UITableViewCell()
         }
-        if let _model: ConcelhoModel = self.searchArray?[exist: indexPath.row] {
+        var tempCell: [ConcelhoModel]?
+        isSearching == false ? (tempCell = self._concelho) : (tempCell = self.searchArray)
+        if let _model: ConcelhoModel = tempCell?[exist: indexPath.row] {
             cell.setLabelTitle(model: _model)
         } else {
             cell.setLabelTitle(model: nil)
@@ -59,7 +62,10 @@ extension PostalCodePresenter: PostalCodeInteractorToPresenterProtocol {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        view?.setViewEditing()
+    }
+    
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) { }
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {}
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {}
@@ -67,9 +73,10 @@ extension PostalCodePresenter: PostalCodeInteractorToPresenterProtocol {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if searchBar.text == nil || searchBar.text == "" {
-            view?.setSearchBarPlaceHolder(name: "Procurar")
+            view?.setSearchBarPlaceHolder(name: "Search")
             self.searchArray = []
             view?.reloadTableData()
+            isSearching = false
         }
         view?.setViewEditing()
     }
@@ -81,13 +88,14 @@ extension PostalCodePresenter: PostalCodeInteractorToPresenterProtocol {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text == nil || searchBar.text == "" {
+            isSearching = false
             self.searchArray = []
             view?.reloadTableData()
         }
         if searchBar.text?.count ?? 0 > 1 {
+            isSearching = true
             self.searchArray = self._concelho?.filter { return $0.cod_distrito?.contains(searchText) ?? false || $0.cod_distrito?.contains(searchText) ?? false || $0.nome_concelho?.contains(searchText) ?? false || $0.nome_concelho?.lowercased().contains(searchText) ?? false }
             view?.reloadTableData()
         }
     }
-    
 }
